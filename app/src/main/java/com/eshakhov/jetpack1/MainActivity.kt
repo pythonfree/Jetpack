@@ -58,7 +58,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            LazyRow(
+            LazyColumn(
                 modifier = Modifier
                     .fillMaxWidth()
                     .background(Grey100)
@@ -66,12 +66,12 @@ class MainActivity : ComponentActivity() {
             ) {
                 itemsIndexed(
                     listOf(
-                        ItemRowModel(R.drawable.image_1, "Миша"),
-                        ItemRowModel(R.drawable.image_2, "Вася"),
-                        ItemRowModel(R.drawable.image_3, "Толя"),
-                        ItemRowModel(R.drawable.image_1, "Дима"),
-                        ItemRowModel(R.drawable.image_5, "Женя"),
-                        ItemRowModel(R.drawable.image_6, "Костя"),
+                        ItemRowModel(R.drawable.image_1, "Миша", "placerat ancillae nihil vero nihil expetenda sem moderatius mus nullam mediocritatem rectequeplacerat ancillae nihil vero nihil expetenda sem moderatius mus nullam mediocritatem recteque"),
+                        ItemRowModel(R.drawable.image_2, "Вася", "placerat ancillae nihil vero nihil expetenda sem moderatius mus nullam mediocritatem rectequeplacerat ancillae nihil vero nihil expetenda sem moderatius mus nullam mediocritatem recteque"),
+                        ItemRowModel(R.drawable.image_3, "Толя", "placerat ancillae nihil vero nihil expetenda sem moderatius mus nullam mediocritatem rectequeplacerat ancillae nihil vero nihil expetenda sem moderatius mus nullam mediocritatem recteque"),
+                        ItemRowModel(R.drawable.image_1, "Дима", "placerat ancillae nihil vero nihil expetenda sem moderatius mus nullam mediocritatem rectequeplacerat ancillae nihil vero nihil expetenda sem moderatius mus nullam mediocritatem recteque"),
+                        ItemRowModel(R.drawable.image_5, "Женя", "placerat ancillae nihil vero nihil expetenda sem moderatius mus nullam mediocritatem rectequeplacerat ancillae nihil vero nihil expetenda sem moderatius mus nullam mediocritatem recteque"),
+                        ItemRowModel(R.drawable.image_6, "Костя", "placerat ancillae nihil vero nihil expetenda sem moderatius mus nullam mediocritatem rectequeplacerat ancillae nihil vero nihil expetenda sem moderatius mus nullam mediocritatem recteque"),
                     )
                 ){
                     _, item ->
