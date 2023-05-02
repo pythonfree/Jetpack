@@ -39,6 +39,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -94,8 +95,8 @@ private fun CircleItem() {
 }
 
 @Composable
-private fun ListItem(name: String, prof: String) {
-    var counter = remember {
+private fun ListItem(name: String = "name", prof: String = "prof") {
+    val counter = remember {
         mutableStateOf(0)
     }
     Card(
@@ -110,7 +111,8 @@ private fun ListItem(name: String, prof: String) {
     ) {
         Box() {
             Row(
-                verticalAlignment = Alignment.CenterVertically
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Image(
                     painter = painterResource(id = R.drawable.image),
